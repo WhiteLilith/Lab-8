@@ -1,0 +1,47 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication21
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double A, B, C, s1, s2, s3;
+            Console.Write("Введите А: ");
+            A = double.Parse(Console.ReadLine());
+            Console.Write("Введите B: ");
+            B = double.Parse(Console.ReadLine());
+            Console.Write("Введите C: ");
+            C = double.Parse(Console.ReadLine());
+            s1 = A + B;
+            s2 = A + C;
+            s3 = B + C;
+            if (s1 >= s2 && s1 >= s3)
+            {
+                Console.Write("Сумма наибольших чисел равна ");
+                Console.WriteLine(s1);
+            }
+            else
+            {
+                if (s2 >= s1 && s2 >= s3)
+                {
+                    Console.Write("Сумма наибольших чисел равна ");
+                    Console.WriteLine(s2);
+                }
+                else
+                {
+                    if (s3 >= s1 && s3 >= s2)
+                    {
+                        Console.Write("Сумма наибольших чисел равна ");
+                        Console.WriteLine(s3);
+                    }
+                }
+            }
+            Console.ReadKey();
+        }
+    }
+}
