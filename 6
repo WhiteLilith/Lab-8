@@ -1,0 +1,64 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication21
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int A;
+            string[] z = new string[2] { "Чётное ", "Нечётное " };
+            string[] ch = new string[3] { "однозначное ", "двузначное ", "трехзначное " };
+            Console.Write("Введите число для описания: ");
+            A = int.Parse(Console.ReadLine());
+            if (A % 2 == 0)
+            {
+                if (A < 10)
+                {
+                    Console.Write(z[0]);
+                    Console.Write(ch[0]);
+                }
+                else
+                {
+                    if (A < 100)
+                    {
+                        Console.Write(z[0]);
+                        Console.Write(ch[1]);
+                    }
+                    else
+                    {
+                        Console.Write(z[0]);
+                        Console.Write(ch[2]);
+                    }
+                }
+            }
+            else
+            {
+                if (A < 10)
+                {
+                    Console.Write(z[1]);
+                    Console.Write(ch[0]);
+                }
+                else
+                {
+                    if (A < 100)
+                    {
+                        Console.Write(z[1]);
+                        Console.Write(ch[1]);
+                    }
+                    else
+                    {
+                        Console.Write(z[1]);
+                        Console.Write(ch[2]);
+                    }
+                }
+            }
+            Console.WriteLine("число");
+            Console.ReadKey();
+        }
+    }
+}
