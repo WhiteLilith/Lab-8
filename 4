@@ -1,0 +1,45 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication21
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double xA, yA;
+            Console.Write("Введите координаты точки А(х,у): ");
+            xA = double.Parse(Console.ReadLine());
+            yA = double.Parse(Console.ReadLine());
+            if (xA > 0 && yA > 0)
+            {
+                Console.WriteLine("Точка А лежит в I координатной четверти.");
+            }
+            else
+            {
+                if (xA > 0 && yA < 0)
+                {
+                    Console.WriteLine("Точка А лежит в IV координатной четверти.");
+                }
+                else
+                {
+                    if (xA < 0 && yA < 0)
+                    {
+                        Console.WriteLine("Точка А лежит в III координатной четверти.");
+                    }
+                    else
+                    {
+                        if (xA < 0 && yA > 0)
+                        {
+                            Console.WriteLine("Точка А лежит вo II координатной четверти.");
+                        }
+                    }
+                }
+            }
+            Console.ReadKey();
+        }
+    }
+}
