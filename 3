@@ -1,0 +1,49 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication21
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double xA, yA, xB, yB, xC, yC, d1, d2;
+            Console.Write("Введите координаты точки А(х,у): ");
+            xA = double.Parse(Console.ReadLine());
+            yA = double.Parse(Console.ReadLine());
+            Console.Write("Введите координаты точки B(х,у): ");
+            xB = double.Parse(Console.ReadLine());
+            yB = double.Parse(Console.ReadLine());
+            Console.Write("Введите координаты точки C(х,у): ");
+            xC = double.Parse(Console.ReadLine());
+            yC = double.Parse(Console.ReadLine());
+            d1 = Math.Sqrt(Math.Pow(Math.Abs(xA - xB), 2) + Math.Pow(Math.Abs(yA - yB), 2));
+            d2 = Math.Sqrt(Math.Pow(Math.Abs(xA - xC), 2) + Math.Pow(Math.Abs(yA - yC), 2));
+            if (d1 > d2)
+            {
+                Console.Write("Наиболее близко к точке А расположена точка С, расстояние между этими точками составляет ");
+                Console.WriteLine(d2);
+            }
+            else
+            {
+                if (d2 > d1)
+                {
+                    Console.Write("Наиболее близко к точке А расположена точка B, расстояние между этими точками составляет ");
+                    Console.WriteLine(d1);
+                }
+                else
+                {
+                    if (d1 == d2)
+                    {
+                        Console.Write("Точки А и В равноудалены от точки А, расстояние между В(С) и А составляет ");
+                        Console.WriteLine(d1);
+                    }
+                }
+            }
+            Console.ReadKey();
+        }
+    }
+}
